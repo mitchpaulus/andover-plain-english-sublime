@@ -1,0 +1,4 @@
+https://www.sublimetext.com/docs/3/syntax.html	Syntax definitions
+https://raw.githubusercontent.com/kkos/oniguruma/5.9.6/doc/RE	Regular Expressions Syntax
+https://github.com/tellnobody1/sublime-purescript-syntax	Example syntax
+https://www.sublimetext.com/docs/3/scope_naming.html	Scope naming for syntaxes

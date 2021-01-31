@@ -1,0 +1,33 @@
+%YAML 1.2
+---
+
+name: Andover Plain English
+file_extensions: [and]
+scope: source.and
+
+contexts:
+    main:
+        - match: "^[a-zA-Z0-9.]+(?=:)"
+          scope: entity.name.label.and
+        - match: "'.*"
+          scope: comment.line
+        - match: '\b-?([1-9][0-9]*|0)(\.[0-9]+)?\b'
+          scope: constant.numeric.and
+        - match: '(?i)\b(On|Off|True|False|Failure|Passed|Success)\b'
+          scope: constant.language.and
+        - match: '(?i)(?<![a-zA-Z0-9.])(state|status|enabled|disabled|active|inactive)(?![a-zA-Z0-9.])'
+          scope: constant.language.and
+        - match: '(?i)(?<=Goto )[a-zA-Z0-9.]+'
+          scope: entity.name.label.and
+        - match: '(?i)\b(basedon|goto|break|continue|for|next|if|then|else|line|repeat|until|return|rotate|run|stop|select|case|while|endif|start|to|the)\b'
+          scope: keyword.control.and
+        - match: '[a-zA-Z0-9.]+(?=\()'
+          scope: entity.name.function.and
+        - match: '(?i)\b(tod|ts|tm|th|td|weekday|year|dayofyear|hod|hour|minute|month|second|date)\b'
+          scope: constant.other.and
+        - match: '(?i)\b(numeric|string|arg)\b'
+          scope: entity.name.type
+        - match: '(?i)\bset\b'
+          scope: keyword.operator
+
+# vim:ft=yaml
